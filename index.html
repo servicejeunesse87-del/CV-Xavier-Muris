@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xavier MURIS — Cadre Direction & Management Associatif | Portfolio Interactif</title>
+  <meta name="description" content="Portfolio interactif et CV moderne de Xavier MURIS - Cadre de direction, management associatif et pilotage de politiques jeunesse territoriales.">
+  
+  <!-- Fonts Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              400: '#2dd4bf',
+              500: '#14b8a6',
+              600: '#0d9488',
+              violet: '#8b5cf6',
+              cyan: '#06b6d4',
+              accent: '#6366f1',
+            },
+            darkBg: '#090d16',
+            darkCard: '#111827',
+            darkBorder: '#1f2937',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['"Space Grotesk"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          animation: {
+            'gradient-x': 'gradient-x 15s ease infinite',
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 6s ease-in-out infinite',
+          },
+          keyframes: {
+            'gradient-x': {
+              '0%, 100%': { 'background-size': '200% 200%', 'background-position': 'left center' },
+              '50%': { 'background-size': '200% 200%', 'background-position': 'right center' },
+            },
+            'float': {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #090d16;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1f2937;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #374151;
+    }
+    
+    /* Neo-Glass effect */
+    .glass-panel {
+      background: rgba(17, 24, 39, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .light .glass-panel {
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+    
+    /* Print Stylesheet for PDF Export */
+    @media print {
+      body {
+        background: white !important;
+        color: black !important;
+      }
+      .no-print, header, nav, #contact-form, #theme-toggle, .btn-print, #interactive-filters {
+        display: none !important;
+      }
+      .timeline-card-body {
+        display: block !important;
+      }
+      .page-break {
+        page-break-before: always;
+      }
+      .glass-panel {
+        border: 1px solid #ddd !important;
+        background: white !important;
+        box-shadow: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-darkBg text-slate-100 transition-colors duration-300 antialiased selection:bg-brand-500 selection:text-white font-sans overflow-x-hidden min-h-screen">
+
+  <!-- Ambient Glow Background Gradients -->
+  <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-brand-violet/20 rounded-full blur-[128px] opacity-60 dark:opacity-40 animate-pulse-slow"></div>
+    <div class="absolute top-1/3 -right-40 w-96 h-96 bg-brand-cyan/20 rounded-full blur-[128px] opacity-60 dark:opacity-40"></div>
+    <div class="absolute -bottom-40 left-1/3 w-96 h-96 bg-brand-500/20 rounded-full blur-[128px] opacity-60 dark:opacity-40"></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-darkBg/80 dark:bg-darkBg/80 border-b border-slate-800/80 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Brand Logo / Identity -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-violet to-brand-cyan flex items-center justify-center text-white font-heading font-bold text-lg shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform">
+          XM
+        </div>
+        <div>
+          <span class="font-heading font-bold text-lg tracking-tight block text-white dark:text-white group-hover:text-brand-400 transition-colors">
+            Xavier MURIS
+          </span>
+          <span class="text-xs font-mono text-slate-400 block -mt-1">
+            Cadre Direction & Associatif
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-brand-400 transition-colors flex items-center gap-1.5"><i data-lucide="user" class="w-4 h-4"></i> Profil</a>
+        <a href="#experiences" class="hover:text-brand-400 transition-colors flex items-center gap-1.5"><i data-lucide="briefcase" class="w-4 h-4"></i> Expériences</a>
+        <a href="#competences" class="hover:text-brand-400 transition-colors flex items-center gap-1.5"><i data-lucide="award" class="w-4 h-4"></i> Compétences</a>
+        <a href="#projets" class="hover:text-brand-400 transition-colors flex items-center gap-1.5"><i data-lucide="folder-kanban" class="w-4 h-4"></i> Projets</a>
+        <a href="#diplomes" class="hover:text-brand-400 transition-colors flex items-center gap-1.5"><i data-lucide="graduation-cap" class="w-4 h-4"></i> Diplômes</a>
+        <a href="#contact" class="hover:text-brand-400 transition-colors flex items-center gap-1.5"><i data-lucide="send" class="w-4 h-4"></i> Contact</a>
+      </nav>
+
+      <!-- Action Buttons & Theme Switcher -->
+      <div class="flex items-center gap-3">
+        <!-- Dark/Light Mode Button -->
+        <button id="theme-toggle" title="Basculer Mode Clair/Sombre" class="p-2.5 rounded-xl border border-slate-700/80 bg-slate-900/60 hover:bg-slate-800 text-slate-300 hover:text-white transition-all shadow-sm">
+          <i data-lucide="moon" id="theme-icon" class="w-4 h-4"></i>
+        </button>
+
+        <!-- Print/Download PDF -->
+        <button onclick="window.print()" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-xl border border-slate-700/80 bg-slate-800/80 hover:bg-slate-700 text-xs font-semibold text-slate-200 hover:text-white transition-all shadow-sm">
+          <i data-lucide="download" class="w-4 h-4 text-brand-400"></i>
+          <span>CV PDF</span>
+        </button>
+
+        <!-- CTA Contact -->
+        <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-brand-cyan to-brand-violet hover:opacity-95 text-xs font-bold text-white shadow-lg shadow-brand-cyan/20 hover:shadow-brand-violet/30 transition-all">
+          <i data-lucide="mail" class="w-4 h-4"></i>
+          <span>Échanger</span>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-400 hover:text-white">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden border-b border-slate-800 bg-darkBg/95 px-6 py-4 space-y-3">
+      <a href="#about" class="block text-slate-300 hover:text-brand-400 text-sm py-1">Profil</a>
+      <a href="#experiences" class="block text-slate-300 hover:text-brand-400 text-sm py-1">Expériences</a>
+      <a href="#competences" class="block text-slate-300 hover:text-brand-400 text-sm py-1">Compétences</a>
+      <a href="#projets" class="block text-slate-300 hover:text-brand-400 text-sm py-1">Projets & Réalisations</a>
+      <a href="#diplomes" class="block text-slate-300 hover:text-brand-400 text-sm py-1">Diplômes & Formations</a>
+      <a href="#contact" class="block text-slate-300 hover:text-brand-400 text-sm py-1">Contact</a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Top Badge: Availability & Status -->
+      <div class="flex flex-wrap items-center gap-3 mb-6">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 backdrop-blur-sm">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Prêt pour de nouveaux défis stratégiques & territoriaux
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-slate-800/80 text-slate-300 border border-slate-700/60">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-cyan"></i> Ambazac (87) / Nouvelle-Aquitaine
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-slate-800/80 text-slate-300 border border-slate-700/60">
+          <i data-lucide="car" class="w-3.5 h-3.5 text-brand-violet"></i> Permis B & Mobilité
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Hero Left Column: Identity & Typing Animation -->
+        <div class="lg:col-span-8 space-y-6">
+          
+          <div class="space-y-2">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading tracking-tight text-white leading-tight">
+              Bonjour, je suis <br class="hidden sm:inline">
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan via-brand-400 to-brand-violet">
+                Xavier MURIS
+              </span>
+            </h1>
+            
+            <!-- Dynamic Typing Effect Subtitle -->
+            <div class="h-10 sm:h-12 flex items-center text-xl sm:text-2xl font-mono text-slate-300">
+              <span class="text-brand-cyan font-bold mr-2">&gt;</span>
+              <span id="typing-text" class="text-slate-100 font-semibold"></span>
+              <span class="w-2 h-6 sm:h-7 bg-brand-cyan inline-block ml-1 animate-pulse"></span>
+            </div>
+          </div>
+
+          <!-- Bio Pitch -->
+          <p class="text-base sm:text-lg text-slate-300/90 leading-relaxed max-w-3xl">
+            Professionnel aguerri du secteur associatif et de l'animation socioculturelle, 
+            j'allie <strong>vision stratégique territoriale</strong>, <strong>ingénierie financière institutionnelle</strong> 
+            (CAF, SDJES, FDVA, CD) et <strong>leadership humain</strong>. 
+            Fort de plus de 15 ans d'expérience, je transforme les politiques publiques en dispositifs concrets, 
+            stimulant le pouvoir d'agir des jeunes, fédérant les écosystèmes partenariaux et modernisant le pilotage par l'innovation numérique & l'IA.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#contact" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-gradient-to-r from-brand-cyan to-brand-violet hover:from-brand-cyan/90 hover:to-brand-violet/90 text-white font-bold text-sm shadow-xl shadow-brand-cyan/25 transition-all transform hover:-translate-y-0.5">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Me Contacter / Recrutement</span>
+            </a>
+            
+            <button onclick="window.print()" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-slate-800/90 hover:bg-slate-700/90 border border-slate-700 text-slate-200 font-semibold text-sm transition-all hover:-translate-y-0.5">
+              <i data-lucide="file-text" class="w-4 h-4 text-brand-400"></i>
+              <span>Télécharger le CV PDF</span>
+            </button>
+
+            <a href="#projets" class="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl text-slate-300 hover:text-white font-medium text-sm transition-colors">
+              <span>Voir les Réalisations</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 text-brand-cyan"></i>
+            </a>
+          </div>
+
+          <!-- Direct Contact Badges -->
+          <div class="flex flex-wrap gap-4 pt-2 text-xs font-mono text-slate-400">
+            <a href="mailto:xavier.muris@gmail.com" class="flex items-center gap-2 hover:text-brand-400 transition-colors">
+              <i data-lucide="mail" class="w-3.5 h-3.5 text-brand-cyan"></i> xavier.muris@gmail.com
+            </a>
+            <a href="tel:0615358862" class="flex items-center gap-2 hover:text-brand-400 transition-colors">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-violet"></i> 06 15 35 88 62
+            </a>
+            <span class="flex items-center gap-2">
+              <i data-lucide="home" class="w-3.5 h-3.5 text-brand-400"></i> 8 rue de la Prévoté, 87240 Ambazac
+            </span>
+          </div>
+
+        </div>
+
+        <!-- Hero Right Column: Interactive Card & Highlights -->
+        <div class="lg:col-span-4">
+          <div class="glass-panel p-6 sm:p-7 rounded-3xl relative overflow-hidden shadow-2xl border border-slate-700/50">
+            
+            <!-- Background glow accent inside card -->
+            <div class="absolute -right-16 -top-16 w-40 h-40 bg-brand-violet/30 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="flex items-center justify-between pb-5 border-b border-slate-800">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-brand-violet to-brand-cyan p-0.5 shadow-md">
+                  <div class="w-full h-full bg-slate-900 rounded-[14px] flex items-center justify-center font-bold text-brand-400 font-heading">
+                    DEJEPS
+                  </div>
+                </div>
+                <div>
+                  <h3 class="font-bold text-sm text-white">Certifié & Diplômé d'État</h3>
+                  <p class="text-xs text-slate-400">Céméa Nouvelle-Aquitaine (2024)</p>
+                </div>
+              </div>
+              <span class="text-xs font-mono px-2 py-1 rounded bg-brand-500/10 text-brand-400 border border-brand-500/20">
+                Niv. 6 Bac+3/4
+              </span>
+            </div>
+
+            <!-- Focus Points -->
+            <div class="py-5 space-y-3.5">
+              <div class="flex items-start gap-3">
+                <div class="p-1.5 rounded-lg bg-brand-cyan/10 text-brand-cyan mt-0.5">
+                  <i data-lucide="target" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h4 class="text-xs font-semibold text-white">Pilotage Stratégique & Budgétaire</h4>
+                  <p class="text-xs text-slate-400 leading-normal">Gestion de budgets > 50 K€, sécurisation des subventions CAF, DDETS, FDVA, CD.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="p-1.5 rounded-lg bg-brand-violet/10 text-brand-violet mt-0.5">
+                  <i data-lucide="users" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h4 class="text-xs font-semibold text-white">Alliance Partenariale (40+)</h4>
+                  <p class="text-xs text-slate-400 leading-normal">Fédération des élus, associations locales, collèges, institutions et familles.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="p-1.5 rounded-lg bg-brand-400/10 text-brand-400 mt-0.5">
+                  <i data-lucide="cpu" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h4 class="text-xs font-semibold text-white">Innovation Numérique & IA</h4>
+                  <p class="text-xs text-slate-400 leading-normal">Tableaux de bord d'activité, automatisation du reporting et Promeneur du Net.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Action Interactive Card -->
+            <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
+              <span class="text-slate-400">Secteur d'activité :</span>
+              <span class="font-medium text-brand-cyan bg-slate-900 px-2.5 py-1 rounded-md border border-slate-800">
+                Éducation Populaire & Social
+              </span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- KEY METRICS / IMPACT STATS BAR -->
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
+        
+        <div class="glass-panel p-5 rounded-2xl border border-slate-800 hover:border-brand-500/40 transition-all text-center sm:text-left group">
+          <div class="flex items-center justify-center sm:justify-between mb-2">
+            <span class="text-3xl sm:text-4xl font-extrabold font-heading text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-400">
+              40+
+            </span>
+            <div class="hidden sm:flex p-2 rounded-xl bg-brand-cyan/10 text-brand-cyan group-hover:scale-110 transition-transform">
+              <i data-lucide="handshake" class="w-5 h-5"></i>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm font-semibold text-white">Partenaires Mobilisés</p>
+          <p class="text-xs text-slate-400 mt-0.5">Alliance stratégique & territoriale</p>
+        </div>
+
+        <div class="glass-panel p-5 rounded-2xl border border-slate-800 hover:border-brand-violet/40 transition-all text-center sm:text-left group">
+          <div class="flex items-center justify-center sm:justify-between mb-2">
+            <span class="text-3xl sm:text-4xl font-extrabold font-heading text-transparent bg-clip-text bg-gradient-to-r from-brand-violet to-indigo-400">
+              +39%
+            </span>
+            <div class="hidden sm:flex p-2 rounded-xl bg-brand-violet/10 text-brand-violet group-hover:scale-110 transition-transform">
+              <i data-lucide="trending-up" class="w-5 h-5"></i>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm font-semibold text-white">Fréquentation ALSH Ados</p>
+          <p class="text-xs text-slate-400 mt-0.5">Croissance en 1 an (démarche aller-vers)</p>
+        </div>
+
+        <div class="glass-panel p-5 rounded-2xl border border-slate-800 hover:border-brand-400/40 transition-all text-center sm:text-left group">
+          <div class="flex items-center justify-center sm:justify-between mb-2">
+            <span class="text-3xl sm:text-4xl font-extrabold font-heading text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-brand-400">
+              > 50 K€
+            </span>
+            <div class="hidden sm:flex p-2 rounded-xl bg-emerald-500/10 text-emerald-400 group-hover:scale-110 transition-transform">
+              <i data-lucide="piggy-bank" class="w-5 h-5"></i>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm font-semibold text-white">Budget Annuel Piloté</p>
+          <p class="text-xs text-slate-400 mt-0.5">Optimisation & co-financements</p>
+        </div>
+
+        <div class="glass-panel p-5 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition-all text-center sm:text-left group">
+          <div class="flex items-center justify-center sm:justify-between mb-2">
+            <span class="text-3xl sm:text-4xl font-extrabold font-heading text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">
+              15+
+            </span>
+            <div class="hidden sm:flex p-2 rounded-xl bg-amber-500/10 text-amber-400 group-hover:scale-110 transition-transform">
+              <i data-lucide="clock" class="w-5 h-5"></i>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm font-semibold text-white">Années d'Expertise</p>
+          <p class="text-xs text-slate-400 mt-0.5">Direction, jeunesse & éducation</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION EXPÉRIENCES PROFESSIONNELLES (TIMELINE INTERACTIVE) -->
+  <section id="experiences" class="py-20 relative bg-slate-950/50 border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-cyan/10 text-brand-cyan font-mono text-xs mb-3 border border-brand-cyan/20">
+            <i data-lucide="git-branch" class="w-3.5 h-3.5"></i> PARCOURS & RÉALISATIONS
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+            Expériences Professionnelles
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-2xl">
+            Cliquez sur chaque carte pour déplier le détail des missions, des résultats chiffrés et des compétences mobilisées.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div id="interactive-filters" class="flex flex-wrap gap-2 text-xs font-semibold">
+          <button data-filter="all" class="exp-filter-btn px-4 py-2 rounded-xl bg-brand-500 text-white shadow-md shadow-brand-500/20 transition-all">
+            Toutes
+          </button>
+          <button data-filter="direction" class="exp-filter-btn px-4 py-2 rounded-xl bg-slate-900 text-slate-400 hover:text-white border border-slate-800 hover:border-slate-700 transition-all">
+            Direction & Stratégie
+          </button>
+          <button data-filter="animation" class="exp-filter-btn px-4 py-2 rounded-xl bg-slate-900 text-slate-400 hover:text-white border border-slate-800 hover:border-slate-700 transition-all">
+            Animation & Pédagogie
+          </button>
+          <button data-filter="mediation" class="exp-filter-btn px-4 py-2 rounded-xl bg-slate-900 text-slate-400 hover:text-white border border-slate-800 hover:border-slate-700 transition-all">
+            Médiation & Écoute
+          </button>
+        </div>
+      </div>
+
+      <!-- Timeline Container -->
+      <div class="relative border-l-2 border-slate-800/80 ml-4 md:ml-8 pl-6 md:pl-10 space-y-8">
+        
+        <!-- Experience 1: CASA Responsable Secteur Jeunesse -->
+        <div class="timeline-item group relative" data-category="direction">
+          <!-- Timeline Node Marker -->
+          <div class="absolute -left-[31px] md:-left-[47px] top-1.5 w-7 h-7 rounded-full bg-brand-cyan text-slate-950 flex items-center justify-center font-bold text-xs ring-4 ring-darkBg shadow-lg shadow-brand-cyan/30 group-hover:scale-125 transition-transform">
+            <i data-lucide="briefcase" class="w-3.5 h-3.5"></i>
+          </div>
+
+          <div class="glass-panel rounded-2xl border border-slate-800 hover:border-brand-cyan/40 transition-all overflow-hidden">
+            <!-- Accordion Header -->
+            <button class="accordion-trigger w-full text-left p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 cursor-pointer focus:outline-none">
+              <div>
+                <div class="flex flex-wrap items-center gap-2 mb-1">
+                  <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-brand-cyan/15 text-brand-cyan border border-brand-cyan/25">
+                    2015 – Aujourd'hui
+                  </span>
+                  <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-slate-800 text-slate-300">
+                    Poste Actuel
+                  </span>
+                  <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-purple-500/10 text-purple-400 border border-purple-500/20">
+                    Direction & Pilotage
+                  </span>
+                </div>
+                <h3 class="text-lg sm:text-xl font-bold font-heading text-white group-hover:text-brand-400 transition-colors">
+                  Responsable Secteur Jeunesse
+                </h3>
+                <p class="text-sm text-slate-400 font-medium">
+                  Centre Animation Sociale Ambazac (CASA)
+                </p>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <span class="text-xs text-brand-cyan font-mono hidden sm:inline">Détails & Résultats</span>
+                <div class="accordion-chevron w-8 h-8 rounded-full bg-slate-800/80 flex items-center justify-center text-slate-400 group-hover:text-white transition-transform">
+                  <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                </div>
+              </div>
+            </button>
+
+            <!-- Accordion Content (Open by default for current key job) -->
+            <div class="accordion-content px-6 pb-6 pt-2 border-t border-slate-800/60 block">
+              <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                Définition, gouvernance et pilotage opérationnel de la politique jeunesse territoriale d'Ambazac et de son bassin de vie. Conduite de projets de l'analyse diagnostique à l'évaluation d'impact social.
+              </p>
+
+              <!-- Detailed achievements bullets -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-slate-300">
+                <div class="flex items-start gap-2.5 p-3 rounded-xl bg-slate-900/60 border border-slate-800/60">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-cyan shrink-0 mt-0.5"></i>
+                  <span><strong>Gouvernance & Réseau :</strong> Fédéré et animé une alliance stratégique de <strong>plus de 40 partenaires</strong> institutionnels (CAF, SDJES, CD87) et associatifs.</span>
+                </div>
+
+                <div class="flex items-start gap-2.5 p-3 rounded-xl bg-slate-900/60 border border-slate-800/60">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-cyan shrink-0 mt-0.5"></i>
+                  <span><strong>Finance & Budget :</strong> Gestion annuelle d'un budget <strong>supérieur à 50 K€</strong> et sécurisation de financements institutionnels et d'opportunités (CAF, FDVA).</span>
+                </div>
+
+                <div class="flex items-start gap-2.5 p-3 rounded-xl bg-slate-900/60 border border-slate-800/60">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-cyan shrink-0 mt-0.5"></i>
+                  <span><strong>Dispositifs Phares :</strong> Direction de 3 dispositifs majeurs : <strong>CAF Évasion</strong>, <strong>Innov Jeune</strong> et <strong>PS Jeunes</strong> (programmation à la valorisation).</span>
+                </div>
+
+                <div class="flex items-start gap-2.5 p-3 rounded-xl bg-slate-900/60 border border-slate-800/60">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-cyan shrink-0 mt-0.5"></i>
+                  <span><strong>Impact Mesurable :</strong> <strong>+39% de fréquentation</strong> de l'ALSH Ados en un an grâce au déploiement d'une stratégie d'aller-vers volontariste.</span>
+                </div>
+
+                <div class="flex items-start gap-2.5 p-3 rounded-xl bg-slate-900/60 border border-slate-800/60">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-cyan shrink-0 mt-0.5"></i>
+                  <span><strong>Innovation & Outils Digitaux :</strong> Conception et mise en œuvre de tableaux de bord de suivi d'activité et d'outils collaboratifs pour fluidifier le reporting.</span>
+                </div>
+
+                <div class="flex items-start gap-2.5 p-3 rounded-xl bg-slate-900/60 border border-slate-800/60">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-cyan shrink-0 mt-0.5"></i>
+                  <span><strong>Évaluations & Décideurs :</strong> Rédaction de bilans qualitatifs et quantitatifs complets avec mesure d'impact social pour les décideurs territoriaux.</span>
+                </div>
+              </div>
+
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-2 mt-4 pt-4 border-t border-slate-800">
+                <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-slate-900 text-slate-300 border border-slate-800">Stratégie Territoriale</span>
+                <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-slate-900 text-slate-300 border border-slate-800">Gestion Budgétaire</span>
+                <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-slate-900 text-slate-300 border border-slate-800">Management Équipe</span>
+                <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-slate-900 text-slate-300 border border-slate-800">Relations CAF & Élus</span>
+                <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-slate-900 text-slate-300 border border-slate-800">Ingénierie de Projet</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 2: Directeur ALSH LoKdo -->
+        <div class="timeline-item group relative" data-category="animation">
+          <div class="absolute -left-[31px] md:-left-[47px] top-1.5 w-7 h-7 rounded-full bg-brand-violet text-white flex items-center justify-center font-bold text-xs ring-4 ring-darkBg shadow-lg shadow-brand-violet/30 group-hover:scale-125 transition-transform">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+          </div>
+
+          <div class="glass-panel rounded-2xl border border-slate-800 hover:border-brand-violet/40 transition-all overflow-hidden">
+            <button class="accordion-trigger w-full text-left p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 cursor-pointer focus:outline-none">
+              <div>
+                <div class="flex flex-wrap items-center gap-2 mb-1">
+                  <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-brand-violet/15 text-brand-violet border border-brand-violet/25">
+                    2009 – Aujourd'hui
+                  </span>
+                  <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-slate-800 text-slate-300">
+                    Pédagogie & Ados
+                  </span>
+                </div>
+                <h3 class="text-lg sm:text-xl font-bold font-heading text-white group-hover:text-brand-violet transition-colors">
+                  Directeur & Animateur ALSH Ados "LoKdo"
+                </h3>
+                <p class="text-sm text-slate-400 font-medium">
+                  Accueil de Loisirs Sans Hébergement (12 - 17 ans)
+                </p>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <span class="text-xs text-brand-violet font-mono hidden sm:inline">Détails</span>
+                <div class="accordion-chevron w-8 h-8 rounded-full bg-slate-800/80 flex items-center justify-center text-slate-400 group-hover:text-white transition-transform">
+                  <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                </div>
+              </div>
+            </button>
+
+            <div class="accordion-content px-6 pb-6 pt-2 border-t border-slate-800/60 hidden">
+              <div class="space-y-3 text-xs sm:text-sm text-slate-300">
+                <p class="leading-relaxed">
+                  Conception et mise en œuvre du projet pédagogique axé sur l'autonomisation, la citoyenneté et la responsabilisation des adolescents de 12 à 17 ans.
+                </p>
+                <ul class="space-y-2">
+                  <li class="flex items-start gap-2">
+                    <i data-lucide="check" class="w-4 h-4 text-brand-violet shrink-0 mt-0.5"></i>
+                    <span>Conception et conduite de projets éducatifs, culturels et sportifs favorisant l'implication active et le pouvoir d'agir des jeunes.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i data-lucide="check" class="w-4 h-4 text-brand-violet shrink-0 mt-0.5"></i>
+                    <span>Accompagnement individualisé et collectif d'adolescents dans la construction de leurs projets personnels et départs en vacances autonomes.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i data-lucide="check" class="w-4 h-4 text-brand-violet shrink-0 mt-0.5"></i>
+                    <span>Gestion logistique, sécuritaire et administrative des séjours éducatifs et événements festifs fédérateurs territoriaux.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 3: LAEP ONIDOO & CLAS -->
+        <div class="timeline-item group relative" data-category="mediation">
+          <div class="absolute -left-[31px] md:-left-[47px] top-1.5 w-7 h-7 rounded-full bg-brand-400 text-slate-950 flex items-center justify-center font-bold text-xs ring-4 ring-darkBg shadow-lg shadow-brand-400/30 group-hover:scale-125 transition-transform">
+            <i data-lucide="heart-handshake" class="w-3.5 h-3.5"></i>
+          </div>
+
+          <div class="glass-panel rounded-2xl border border-slate-800 hover:border-brand-400/40 transition-all overflow-hidden">
+            <button class="accordion-trigger w-full text-left p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 cursor-pointer focus:outline-none">
+              <div>
+                <div class="flex flex-wrap items-center gap-2 mb-1">
+                  <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-brand-400/15 text-brand-400 border border-brand-400/25">
+                    2015 – Aujourd'hui
+                  </span>
+                  <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-slate-800 text-slate-300">
+                    Soutien Parentalité & CLAS
+                  </span>
+                </div>
+                <h3 class="text-lg sm:text-xl font-bold font-heading text-white group-hover:text-brand-400 transition-colors">
+                  Accueillant LAEP "ONIDOO" & Responsable CLAS
+                </h3>
+                <p class="text-sm text-slate-400 font-medium">
+                  Lieu d'Accueil Enfants Parents & Contrat Local d'Accompagnement à la Scolarité
+                </p>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <span class="text-xs text-brand-400 font-mono hidden sm:inline">Détails</span>
+                <div class="accordion-chevron w-8 h-8 rounded-full bg-slate-800/80 flex items-center justify-center text-slate-400 group-hover:text-white transition-transform">
+                  <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                </div>
+              </div>
+            </button>
+
+            <div class="accordion-content px-6 pb-6 pt-2 border-t border-slate-800/60 hidden">
+              <div class="space-y-3 text-xs sm:text-sm text-slate-300">
+                <p class="leading-relaxed">
+                  <strong>Accueillant LAEP ONIDOO (2015 – Aujourd'hui) :</strong> Accueil inconditionnel des tout-petits accompagnés de leurs parents, posture d'écoute bienveillante, renforcement du lien parent-enfant et prévention précoce de l'isolement parental.
+                </p>
+                <p class="leading-relaxed">
+                  <strong>Responsable CLAS (2015 – 2019) :</strong> Coordination de l'accompagnement à la scolarité des élèves du CP au CM2, accompagnement méthodologique, médiation familles-écoles et valorisation des compétences des enfants.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 4: Assistant d'Éducation & Éducateur Sportif -->
+        <div class="timeline-item group relative" data-category="mediation">
+          <div class="absolute -left-[31px] md:-left-[47px] top-1.5 w-7 h-7 rounded-full bg-slate-700 text-slate-300 flex items-center justify-center font-bold text-xs ring-4 ring-darkBg shadow-md group-hover:scale-125 transition-transform">
+            <i data-lucide="shield" class="w-3.5 h-3.5"></i>
+          </div>
+
+          <div class="glass-panel rounded-2xl border border-slate-800 hover:border-slate-700 transition-all overflow-hidden">
+            <button class="accordion-trigger w-full text-left p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 cursor-pointer focus:outline-none">
+              <div>
+                <div class="flex flex-wrap items-center gap-2 mb-1">
+                  <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-slate-800 text-slate-400 border border-slate-700">
+                    2004 – 2010
+                  </span>
+                  <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-slate-800 text-slate-300">
+                    Éducation & Sport
+                  </span>
+                </div>
+                <h3 class="text-lg sm:text-xl font-bold font-heading text-white">
+                  Assistant d'Éducation & Éducateur Sportif
+                </h3>
+                <p class="text-sm text-slate-400 font-medium">
+                  Collège Jean Moulin Ambazac | Destination Sports & Loisirs | Profession Sport 87
+                </p>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <span class="text-xs text-slate-400 font-mono hidden sm:inline">Détails</span>
+                <div class="accordion-chevron w-8 h-8 rounded-full bg-slate-800/80 flex items-center justify-center text-slate-400 group-hover:text-white transition-transform">
+                  <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                </div>
+              </div>
+            </button>
+
+            <div class="accordion-content px-6 pb-6 pt-2 border-t border-slate-800/60 hidden">
+              <div class="space-y-3 text-xs sm:text-sm text-slate-300">
+                <p class="leading-relaxed">
+                  <strong>Collège Jean Moulin (2004–2010) :</strong> Encadrement de la vie scolaire, gestion de situations de crise auprès d'adolescents, médiation élèves-familles-communauté éducative.
+                </p>
+                <p class="leading-relaxed">
+                  <strong>Éducateur Sportif (2004–2009) :</strong> Conception et encadrement d'activités physiques de pleine nature pour tous publics, transmission des valeurs sportives d'effort collectif et de respect.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION COMPÉTENCES & OUTILS (SKILLS GRID AVEC HOVER PARTICULIER) -->
+  <section id="competences" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-violet/10 text-brand-violet font-mono text-xs mb-3 border border-brand-violet/20">
+          <i data-lucide="cpu" class="w-3.5 h-3.5"></i> SAVOIR-FAIRE & INGÉNIERIE
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+          Compétences Clés & Outils
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-2">
+          Un profil hybride conjuguant <strong>expertise managériale associative</strong> et <strong>maîtrise des leviers d'innovation numérique</strong>.
+        </p>
+      </div>
+
+      <!-- Grid of Skills Clusters -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Card 1: Direction & Stratégie -->
+        <div class="glass-panel p-6 rounded-3xl border border-slate-800 hover:border-brand-cyan/50 transition-all group hover:-translate-y-1">
+          <div class="flex items-center gap-3.5 mb-5">
+            <div class="w-12 h-12 rounded-2xl bg-brand-cyan/10 border border-brand-cyan/20 flex items-center justify-center text-brand-cyan group-hover:scale-110 transition-transform">
+              <i data-lucide="compass" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-white font-heading text-lg">Direction & Stratégie</h3>
+              <p class="text-xs text-slate-400">Pilotage de structure & dispositifs</p>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-200">Direction de service & projet</span>
+                <span class="text-brand-cyan font-mono">98%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
+                <div class="h-full bg-gradient-to-r from-brand-cyan to-brand-400 rounded-full transition-all duration-1000" style="width: 98%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-200">Pilotage budgétaire (>50 K€)</span>
+                <span class="text-brand-cyan font-mono">95%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
+                <div class="h-full bg-gradient-to-r from-brand-cyan to-brand-400 rounded-full transition-all duration-1000" style="width: 95%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-200">Stratégie territoriale & évaluation</span>
+                <span class="text-brand-cyan font-mono">92%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
+                <div class="h-full bg-gradient-to-r from-brand-cyan to-brand-400 rounded-full transition-all duration-1000" style="width: 92%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-200">Recherche de financements (CAF, FDVA)</span>
+                <span class="text-brand-cyan font-mono">96%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
+                <div class="h-full bg-gradient-to-r from-brand-cyan to-brand-400 rounded-full transition-all duration-1000" style="width: 96%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-5 pt-4 border-t border-slate-800/80 flex flex-wrap gap-1.5">
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400">Évaluation d'impact</span>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400">Diagnostic territorial</span>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400">Conventions CAF</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Gouvernance & Partenariats -->
+        <div class="glass-panel p-6 rounded-3xl border border-slate-800 hover:border-brand-violet/50 transition-all group hover:-translate-y-1">
+          <div class="flex items-center gap-3.5 mb-5">
+            <div class="w-12 h-12 rounded-2xl bg-brand-violet/10 border border-brand-violet/20 flex items-center justify-center text-brand-violet group-hover:scale-110 transition-transform">
+              <i data-lucide="network" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-white font-heading text-lg">Gouvernance & Réseau</h3>
+              <p class="text-xs text-slate-400">Alliance multi-acteurs</p>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-200">Alliance partenariale (40+ acteurs)</span>
+                <span class="text-brand-violet font-mono">98%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
+                <div class="h-full bg-gradient-to-r from-brand-violet to-indigo-400 rounded-full transition-all duration-1000" style="width: 98%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-200">Relations collectivités & élus locaux</span>
+                <span class="text-brand-violet font-mono">94%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
+                <div class="h-full bg-gradient-to-r from-brand-violet to-indigo-400 rounded-full transition-all duration-1000" style="width: 94%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-200">Co-construction de projets complexes</span>
+                <span class="text-brand-violet font-mono">95%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
+                <div class="h-full bg-gradient-to-r from-brand-violet to-indigo-400 rounded-full transition-all duration-1000" style="width: 95%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-200">Interlocution institutionnelle (DDETS, CD)</span>
+                <span class="text-brand-violet font-mono">92%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
+                <div class="h-full bg-gradient-to-r from-brand-violet to-indigo-400 rounded-full transition-all duration-1000" style="width: 92%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-5 pt-4 border-t border-slate-800/80 flex flex-wrap gap-1.5">
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400">Pacte territorial</span>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400">Concertation</span>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400">Synergies locales</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Management & Leadership -->
+        <div class="glass-panel p-6 rounded-3xl border border-slate-800 hover:border-emerald-500/50 transition-all group hover:-translate-y-1">
+          <div class="flex items-center gap-3.5 mb-5">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform">
+              <i data-lucide="users" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-white font-heading text-lg">Management & Humain</h3>
+              <p class="text-xs text-slate-400">Leadership d'équipe & médiation</p>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-200">Encadrement d'équipe pluridisciplinaire</span>
+                <span class="text-emerald-400 font-mono">96%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
+                <div class="h-full bg-gradient-to-r from-emerald-500 to-teal-400 rounded-full transition-all duration-1000" style="width: 96%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-200">Médiation & résolution de conflits</span>
+                <span class="text-emerald-400 font-mono">94%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
+                <div class="h-full bg-gradient-to-r from-emerald-500 to-teal-400 rounded-full transition-all duration-1000" style="width: 94%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-200">Prise de parole & plaidoyer</span>
+                <span class="text-emerald-400 font-mono">93%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
+                <div class="h-full bg-gradient-to-r from-emerald-500 to-teal-400 rounded-full transition-all duration-1000" style="width: 93%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-200">Capitalisation & transmission</span>
+                <span class="text-emerald-400 font-mono">90%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
+                <div class="h-full bg-gradient-to-r from-emerald-500 to-teal-400 rounded-full transition-all duration-1000" style="width: 90%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-5 pt-4 border-t border-slate-800/80 flex flex-wrap gap-1.5">
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400">Écoute active</span>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400">Climat de confiance</span>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400">Montée en compétences</span>
+          </div>
+        </div>
+
+        <!-- Card 4: Innovation Numérique & IA -->
+        <div class="glass-panel p-6 rounded-3xl border border-slate-800 hover:border-brand-accent/50 transition-all group hover:-translate-y-1">
+          <div class="flex items-center gap-3.5 mb-5">
+            <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:scale-110 transition-transform">
+              <i data-lucide="bot" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-white font-heading text-lg">Innovation & IA</h3>
+              <p class="text-xs text-slate-400">Productivité & transformation digitale</p>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-200">IA Générative & Prompt Engineering</span>
+                <span class="text-indigo-400 font-mono">92%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
+                <div class="h-full bg-gradient-to-r from-indigo-500 to-brand-violet rounded-full transition-all duration-1000" style="width: 92%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-200">Tableaux de bord & automatisation</span>
+                <span class="text-indigo-400 font-mono">90%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
+                <div class="h-full bg-gradient-to-r from-indigo-500 to-brand-violet rounded-full transition-all duration-1000" style="width: 90%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-200">Promeneur du Net (Présence réseaux sociaux)</span>
+                <span class="text-indigo-400 font-mono">96%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
+                <div class="h-full bg-gradient-to-r from-indigo-500 to-brand-violet rounded-full transition-all duration-1000" style="width: 96%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-5 pt-4 border-t border-slate-800/80 flex flex-wrap gap-1.5">
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400">Automatisation</span>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400">Gain de productivité</span>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400">Culture Web 3/IA</span>
+          </div>
+        </div>
+
+        <!-- Card 5: Outils Logiciels & Création -->
+        <div class="glass-panel p-6 rounded-3xl border border-slate-800 hover:border-pink-500/50 transition-all group hover:-translate-y-1">
+          <div class="flex items-center gap-3.5 mb-5">
+            <div class="w-12 h-12 rounded-2xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400 group-hover:scale-110 transition-transform">
+              <i data-lucide="layers" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-white font-heading text-lg">Outils & Médias</h3>
+              <p class="text-xs text-slate-400">Logiciels métiers & création visuelle</p>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-200">Suite Office / Excel avancé</span>
+                <span class="text-pink-400 font-mono">95%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
+                <div class="h-full bg-gradient-to-r from-pink-500 to-rose-400 rounded-full transition-all duration-1000" style="width: 95%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-200">Canva Pro & Outils Graphiques</span>
+                <span class="text-pink-400 font-mono">90%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
+                <div class="h-full bg-gradient-to-r from-pink-500 to-rose-400 rounded-full transition-all duration-1000" style="width: 90%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-200">Montage Vidéo (Adobe Premiere Pro)</span>
+                <span class="text-pink-400 font-mono">82%</span>
+              </div>
+              <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
+                <div class="h-full bg-gradient-to-r from-pink-500 to-rose-400 rounded-full transition-all duration-1000" style="width: 82%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-5 pt-4 border-t border-slate-800/80 flex flex-wrap gap-1.5">
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400">Communication visuelle</span>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400">Capsules vidéo</span>
+          </div>
+        </div>
+
+        <!-- Card 6: Intérêts & Facteurs Clés d'Équilibre -->
+        <div class="glass-panel p-6 rounded-3xl border border-slate-800 hover:border-amber-500/50 transition-all group hover:-translate-y-1">
+          <div class="flex items-center gap-3.5 mb-5">
+            <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 group-hover:scale-110 transition-transform">
+              <i data-lucide="zap" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-white font-heading text-lg">Intérêts & Mindset</h3>
+              <p class="text-xs text-slate-400">Rigueur, tactique et créativité</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3 pt-2">
+            <div class="p-3 rounded-2xl bg-slate-900/80 border border-slate-800 flex flex-col items-center text-center">
+              <i data-lucide="cpu" class="w-5 h-5 text-brand-cyan mb-1.5"></i>
+              <span class="text-xs font-bold text-white">Intelligence Artificielle</span>
+              <span class="text-[10px] text-slate-400">Veille & agents</span>
+            </div>
+
+            <div class="p-3 rounded-2xl bg-slate-900/80 border border-slate-800 flex flex-col items-center text-center">
+              <i data-lucide="chess-knight" class="w-5 h-5 text-amber-400 mb-1.5"></i>
+              <span class="text-xs font-bold text-white">Échecs</span>
+              <span class="text-[10px] text-slate-400">Vision stratégique</span>
+            </div>
+
+            <div class="p-3 rounded-2xl bg-slate-900/80 border border-slate-800 flex flex-col items-center text-center">
+              <i data-lucide="activity" class="w-5 h-5 text-emerald-400 mb-1.5"></i>
+              <span class="text-xs font-bold text-white">Sports & Outdoor</span>
+              <span class="text-[10px] text-slate-400">Dépassement de soi</span>
+            </div>
+
+            <div class="p-3 rounded-2xl bg-slate-900/80 border border-slate-800 flex flex-col items-center text-center">
+              <i data-lucide="music" class="w-5 h-5 text-brand-violet mb-1.5"></i>
+              <span class="text-xs font-bold text-white">Musique</span>
+              <span class="text-[10px] text-slate-400">Sensibilité & rythme</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION GALERIE DE PROJETS (PORTFOLIO SHOWCASE AVEC MODAL DÉTAILLÉE) -->
+  <section id="projets" class="py-20 relative bg-slate-950/60 border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-cyan/10 text-brand-cyan font-mono text-xs mb-3 border border-brand-cyan/20">
+            <i data-lucide="folder-kanban" class="w-3.5 h-3.5"></i> SHOWCASE STRATÉGIQUE
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+            Projets & Dispositifs Clés
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-2xl">
+            Focus sur des chantiers emblématiques pilotés avec succès : diagnostic, co-construction, financements et mesure d'impact.
+          </p>
+        </div>
+
+        <!-- Project Filter Buttons -->
+        <div class="flex flex-wrap gap-2 text-xs font-semibold">
+          <button data-pfilter="all" class="proj-filter-btn px-4 py-2 rounded-xl bg-brand-cyan text-slate-950 shadow-md font-bold transition-all">
+            Tous
+          </button>
+          <button data-pfilter="institutionnel" class="proj-filter-btn px-4 py-2 rounded-xl bg-slate-900 text-slate-400 hover:text-white border border-slate-800 transition-all">
+            Institutionnels & CAF
+          </button>
+          <button data-pfilter="autonomie" class="proj-filter-btn px-4 py-2 rounded-xl bg-slate-900 text-slate-400 hover:text-white border border-slate-800 transition-all">
+            Ados & Autonomie
+          </button>
+          <button data-pfilter="digital" class="proj-filter-btn px-4 py-2 rounded-xl bg-slate-900 text-slate-400 hover:text-white border border-slate-800 transition-all">
+            Digital & Innovation
+          </button>
+        </div>
+      </div>
+
+      <!-- Project Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Project 1: PS Jeunes CAF87 -->
+        <div class="project-card glass-panel rounded-3xl border border-slate-800 overflow-hidden hover:border-brand-cyan/50 transition-all flex flex-col justify-between group" data-category="institutionnel">
+          <div class="p-6">
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="text-[11px] font-mono px-3 py-1 rounded-full bg-brand-cyan/15 text-brand-cyan border border-brand-cyan/30">
+                Dispositif National CAF
+              </span>
+              <span class="text-xs text-slate-400 font-mono">2020 – En cours</span>
+            </div>
+
+            <h3 class="text-xl font-bold font-heading text-white group-hover:text-brand-cyan transition-colors mb-2">
+              Prestation de Service Jeunes (PS Jeunes)
+            </h3>
+            
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+              Pilotage stratégique de la convention PS Jeunes avec la CAF87 : mobilisation de plus de 40 partenaires, co-construction de l'offre territoriale et mesure continue des effets.
+            </p>
+
+            <div class="space-y-2 mb-4 text-xs text-slate-400">
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-cyan"></i>
+                <span>4 Objectifs nationaux pilotés & évalués</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-cyan"></i>
+                <span>Bilan quadriennal & dossier de renouvellement validé</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">CAF 87</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">Ingénierie</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">Évaluation</span>
+            </div>
+
+            <button onclick="openModal('ps-jeunes')" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-brand-500 hover:text-white text-brand-cyan border border-slate-800 hover:border-brand-500 text-xs font-bold transition-all flex items-center justify-center gap-2">
+              <span>Voir l'étude de cas</span>
+              <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 2: Dispositif CAF Évasion & Innov Jeune -->
+        <div class="project-card glass-panel rounded-3xl border border-slate-800 overflow-hidden hover:border-brand-violet/50 transition-all flex flex-col justify-between group" data-category="autonomie">
+          <div class="p-6">
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="text-[11px] font-mono px-3 py-1 rounded-full bg-brand-violet/15 text-brand-violet border border-brand-violet/30">
+                Pouvoir d'Agir
+              </span>
+              <span class="text-xs text-slate-400 font-mono">Pérenne</span>
+            </div>
+
+            <h3 class="text-xl font-bold font-heading text-white group-hover:text-brand-violet transition-colors mb-2">
+              CAF Évasion & Innov Jeune
+            </h3>
+            
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+              Accompagnement de collectifs d'adolescents vers l'autonomie totale : montage de dossiers de financement, chantiers d'autofinancement et co-organisation de séjours éducatifs.
+            </p>
+
+            <div class="space-y-2 mb-4 text-xs text-slate-400">
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-violet"></i>
+                <span>100% de dossiers subventionnés obtenus</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-violet"></i>
+                <span>Responsabilisation et leadership des 14-17 ans</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">Autonomie</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">Séjours</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">Financement</span>
+            </div>
+
+            <button onclick="openModal('evasion-innov')" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-brand-violet hover:text-white text-brand-violet border border-slate-800 hover:border-brand-violet text-xs font-bold transition-all flex items-center justify-center gap-2">
+              <span>Voir l'étude de cas</span>
+              <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 3: Stratégie Aller-Vers ALSH (+39%) -->
+        <div class="project-card glass-panel rounded-3xl border border-slate-800 overflow-hidden hover:border-emerald-500/50 transition-all flex flex-col justify-between group" data-category="autonomie">
+          <div class="p-6">
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="text-[11px] font-mono px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
+                Performance Sociale
+              </span>
+              <span class="text-xs text-slate-400 font-mono">+39% Croissance</span>
+            </div>
+
+            <h3 class="text-xl font-bold font-heading text-white group-hover:text-emerald-400 transition-colors mb-2">
+              Reconquête & Stratégie d'Aller-Vers
+            </h3>
+            
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+              Refonte globale du positionnement de l'ALSH Ados "LoKdo" : présence de terrain dans l'espace public, co-conception de la programmation et déstigmatisation du lieu.
+            </p>
+
+            <div class="space-y-2 mb-4 text-xs text-slate-400">
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                <span>Fréquentation en hausse de +39% en 12 mois</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                <span>Mixité de genre accrue et nouveaux publics touchés</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">Aller-Vers</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">Croissance</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">Jeunesse</span>
+            </div>
+
+            <button onclick="openModal('aller-vers')" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-emerald-500 hover:text-white text-emerald-400 border border-slate-800 hover:border-emerald-500 text-xs font-bold transition-all flex items-center justify-center gap-2">
+              <span>Voir l'étude de cas</span>
+              <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 4: Promeneur du Net & Transition Digitale -->
+        <div class="project-card glass-panel rounded-3xl border border-slate-800 overflow-hidden hover:border-indigo-500/50 transition-all flex flex-col justify-between group" data-category="digital">
+          <div class="p-6">
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="text-[11px] font-mono px-3 py-1 rounded-full bg-indigo-500/15 text-indigo-400 border border-indigo-500/30">
+                Numérique Éducatif
+              </span>
+              <span class="text-xs text-slate-400 font-mono">2018 – En cours</span>
+            </div>
+
+            <h3 class="text-xl font-bold font-heading text-white group-hover:text-indigo-400 transition-colors mb-2">
+              Promeneur du Net & Outils IA de Pilotage
+            </h3>
+            
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+              Création d'une présence éducative sur les réseaux sociaux (Instagram, Snapchat, Discord) couplée à l'intégration d'outils d'IA pour optimiser les bilans et tableaux de bord.
+            </p>
+
+            <div class="space-y-2 mb-4 text-xs text-slate-400">
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-indigo-400"></i>
+                <span>Écoute préventive sur les réseaux sociaux</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-indigo-400"></i>
+                <span>Automatisation des synthèses de suivi d'activité</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">IA & Prompting</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">Réseaux Sociaux</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">Prévention</span>
+            </div>
+
+            <button onclick="openModal('digital-ia')" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-indigo-500 hover:text-white text-indigo-400 border border-slate-800 hover:border-indigo-500 text-xs font-bold transition-all flex items-center justify-center gap-2">
+              <span>Voir l'étude de cas</span>
+              <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION DIPLÔMES & FORMATIONS -->
+  <section id="diplomes" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-cyan/10 text-brand-cyan font-mono text-xs mb-3 border border-brand-cyan/20">
+          <i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> FORMATION CONTINUE & CERTIFICATIONS
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+          Diplômes & Formations
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-2">
+          Un socle académique solide, complété d'une démarche d'apprentissage continu pour rester à la pointe des exigences réglementaires et sociétales.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Diplômes d'État -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-bold font-heading text-white flex items-center gap-2 pb-2 border-b border-slate-800">
+            <i data-lucide="award" class="w-5 h-5 text-brand-cyan"></i>
+            Diplômes d'État & Titres
+          </h3>
+
+          <!-- DEJEPS -->
+          <div class="glass-panel p-5 rounded-2xl border border-slate-800 hover:border-brand-cyan/40 transition-all">
+            <div class="flex justify-between items-start mb-2">
+              <h4 class="font-bold text-white text-base">DEJEPS</h4>
+              <span class="text-xs font-mono px-2 py-0.5 rounded bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/25">2024</span>
+            </div>
+            <p class="text-xs font-semibold text-slate-300">Diplôme d'État de la Jeunesse, de l'Éducation Populaire et du Sport</p>
+            <p class="text-xs text-slate-400 mt-1">Céméa Nouvelle-Aquitaine — La Souterraine. Spécialité Animation Socio-Éducative ou Culturelle.</p>
+          </div>
+
+          <!-- BEESAPT -->
+          <div class="glass-panel p-5 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all">
+            <div class="flex justify-between items-start mb-2">
+              <h4 class="font-bold text-white text-base">BEESAPT</h4>
+              <span class="text-xs font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400">2003 – 2004</span>
+            </div>
+            <p class="text-xs font-semibold text-slate-300">Brevet d'État d'Éducateur Sportif Activités Physiques Pour Tous</p>
+            <p class="text-xs text-slate-400 mt-1">Encadrement pluridisciplinaire et promotion du sport éducatif.</p>
+          </div>
+
+          <!-- Brevet Parachutisme & Militaire -->
+          <div class="glass-panel p-5 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all">
+            <div class="flex justify-between items-start mb-2">
+              <h4 class="font-bold text-white text-base">Brevet Parachutisme Militaire</h4>
+              <span class="text-xs font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400">1997</span>
+            </div>
+            <p class="text-xs font-semibold text-slate-300">1er RCP (Régiment de Chasseurs Parachutistes) — Bordeaux</p>
+            <p class="text-xs text-slate-400 mt-1">Rigueur opérationnelle, gestion du stress et cohésion d'équipe.</p>
+          </div>
+
+          <!-- PSC1 & Bac -->
+          <div class="grid grid-cols-2 gap-3">
+            <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+              <span class="text-[10px] font-mono text-emerald-400">2022</span>
+              <h5 class="text-xs font-bold text-white">PSC1</h5>
+              <p class="text-[11px] text-slate-400">Croix Rouge Française</p>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+              <span class="text-[10px] font-mono text-slate-400">1994</span>
+              <h5 class="text-xs font-bold text-white">Niveau BAC</h5>
+              <p class="text-[11px] text-slate-400">Économique et Social</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formations Professionnelles Spécialisées -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-bold font-heading text-white flex items-center gap-2 pb-2 border-b border-slate-800">
+            <i data-lucide="book-open" class="w-5 h-5 text-brand-violet"></i>
+            Formations Spécialisées & Certifiantes
+          </h3>
+
+          <!-- Promeneur du Net -->
+          <div class="glass-panel p-5 rounded-2xl border border-slate-800 hover:border-brand-violet/40 transition-all">
+            <div class="flex justify-between items-start mb-2">
+              <h4 class="font-bold text-white text-base">PDN — Promeneur du Net</h4>
+              <span class="text-xs font-mono px-2 py-0.5 rounded bg-brand-violet/10 text-brand-violet border border-brand-violet/25">2018 – En cours</span>
+            </div>
+            <p class="text-xs font-semibold text-slate-300">Maîtrise de la présence éducative sur les réseaux sociaux</p>
+            <p class="text-xs text-slate-400 mt-1">Prévention des cyber-violences, éducation aux médias et médiation numérique.</p>
+          </div>
+
+          <!-- DEFIS E2S -->
+          <div class="glass-panel p-5 rounded-2xl border border-slate-800 hover:border-brand-violet/40 transition-all">
+            <div class="flex justify-between items-start mb-2">
+              <h4 class="font-bold text-white text-base">DEFIS — E2S</h4>
+              <span class="text-xs font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400">2015</span>
+            </div>
+            <p class="text-xs font-semibold text-slate-300">Diagnostic économique et financier</p>
+            <p class="text-xs text-slate-400 mt-1">Traduire le développement associatif en termes économiques et viabilité financière.</p>
+          </div>
+
+          <!-- Formation LAEP -->
+          <div class="glass-panel p-5 rounded-2xl border border-slate-800 hover:border-brand-violet/40 transition-all">
+            <div class="flex justify-between items-start mb-2">
+              <h4 class="font-bold text-white text-base">Formation LAEP & Posture d'Écoute</h4>
+              <span class="text-xs font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400">2019</span>
+            </div>
+            <p class="text-xs font-semibold text-slate-300">Posture de non-jugement et d'écoute active</p>
+            <p class="text-xs text-slate-400 mt-1">Accompagnement de la parentalité et décodage des dynamiques familiales.</p>
+          </div>
+
+          <!-- Montage Vidéo & SST -->
+          <div class="grid grid-cols-2 gap-3">
+            <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+              <span class="text-[10px] font-mono text-brand-cyan">2021</span>
+              <h5 class="text-xs font-bold text-white">Adobe Premiere Pro</h5>
+              <p class="text-[11px] text-slate-400">Montage vidéo & valorisation</p>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+              <span class="text-[10px] font-mono text-slate-400">2015</span>
+              <h5 class="text-xs font-bold text-white">Formation SST</h5>
+              <p class="text-[11px] text-slate-400">Sauveteur Secouriste du Travail</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION À PROPOS & VALEURS / TÉMOIGNAGES -->
+  <section id="about" class="py-20 relative bg-slate-950/40 border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Philosophy & Core Beliefs -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-cyan/10 text-brand-cyan font-mono text-xs border border-brand-cyan/20">
+            <i data-lucide="compass" class="w-3.5 h-3.5"></i> POSTURE & VISION MANAGÉRIALE
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+            « L'éducation populaire augmentée : responsabilisation, confiance & rigueur méthodologique. »
+          </h2>
+
+          <div class="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+            <p>
+              Ma pratique de la direction s'est construite au carrefour de deux impératifs : 
+              <strong>l'exigence d'un impact social tangible sur le terrain</strong> et 
+              <strong>la rigueur d'ingénierie indispensable face aux financeurs publics</strong>.
+            </p>
+            <p>
+              Je crois fermement à l'émancipation par le faire : qu'il s'agisse d'un groupe d'adolescents construisant leur propre séjour ou d'une équipe de professionnels co-écrivant un projet de service, 
+              mon rôle est d'instaurer le cadre sécurisant, les outils de méthode et les ressources financières qui rendent les initiatives possibles.
+            </p>
+            <p>
+              Aujourd'hui, j'intègre activement les technologies émergentes (IA générative, tableaux de bord interactifs) 
+              non pas comme une fin en soi, mais comme un accélérateur précieux pour libérer du temps humain, valoriser les actions associatives et faciliter la prise de décision.
+            </p>
+          </div>
+
+          <!-- Value Pillars -->
+          <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-800">
+            <div>
+              <div class="text-brand-cyan font-heading font-bold text-lg">Aller-Vers</div>
+              <p class="text-xs text-slate-400 mt-0.5">Être présent là où sont les publics sans attendre qu'ils franchissent la porte.</p>
+            </div>
+            <div>
+              <div class="text-brand-violet font-heading font-bold text-lg">Co-création</div>
+              <p class="text-xs text-slate-400 mt-0.5">Impliquer les jeunes et les acteurs à chaque étape du diagnostic au bilan.</p>
+            </div>
+            <div>
+              <div class="text-emerald-400 font-heading font-bold text-lg">Mesure</div>
+              <p class="text-xs text-slate-400 mt-0.5">Traduire l'action humaine en indicateurs clairs et compréhensibles.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Testimonials / Recommandations Cards -->
+        <div class="lg:col-span-5 space-y-4">
+          
+          <div class="glass-panel p-6 rounded-3xl border border-slate-800 shadow-xl relative">
+            <i data-lucide="quote" class="w-8 h-8 text-brand-cyan/20 absolute top-5 right-6"></i>
+            <p class="text-xs sm:text-sm text-slate-300 italic mb-4 leading-relaxed">
+              « Xavier possède une capacité rare à fédérer des interlocuteurs d'horizons très divers : élus, travailleurs sociaux, ados et techniciens CAF. Sa vision du projet jeunesse combine un engagement sans faille et une solide clarté budgétaire. »
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-brand-cyan/20 flex items-center justify-center font-bold text-brand-cyan text-xs">
+                RT
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-white">Partenaire Institutionnel</h4>
+                <p class="text-[11px] text-slate-400">Écosystème Jeunesse & Collectivité</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-panel p-6 rounded-3xl border border-slate-800 shadow-xl relative">
+            <i data-lucide="quote" class="w-8 h-8 text-brand-violet/20 absolute top-5 right-6"></i>
+            <p class="text-xs sm:text-sm text-slate-300 italic mb-4 leading-relaxed">
+              « Grâce à sa posture d'écoute et à sa méthode de responsabilisation, notre secteur jeunes a connu une transformation spectaculaire. Il sait donner confiance aux jeunes comme à ses collaborateurs. »
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-brand-violet/20 flex items-center justify-center font-bold text-brand-violet text-xs">
+                EA
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-white">Équipe d'Animation CASA</h4>
+                <p class="text-[11px] text-slate-400">Coordination Pédagogique</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION CONTACT & FORMULAIRE INTERACTIF -->
+  <section id="contact" class="py-20 relative bg-slate-950/80 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-cyan/10 text-brand-cyan font-mono text-xs mb-3 border border-brand-cyan/20">
+          <i data-lucide="mail" class="w-3.5 h-3.5"></i> ENTRER EN CONTACT
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+          Parlons de Vos Prochains Enjeux
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-2">
+          Vous recherchez un cadre de direction associatif, un directeur de structure ou un chef de projet territorial ? Échangeons dès aujourd'hui.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        
+        <!-- Contact Information Cards -->
+        <div class="lg:col-span-5 space-y-4">
+          
+          <a href="mailto:xavier.muris@gmail.com" class="glass-panel p-5 rounded-2xl border border-slate-800 hover:border-brand-cyan/40 transition-all flex items-center gap-4 group">
+            <div class="w-12 h-12 rounded-xl bg-brand-cyan/10 border border-brand-cyan/20 flex items-center justify-center text-brand-cyan group-hover:scale-110 transition-transform">
+              <i data-lucide="mail" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <p class="text-xs text-slate-400">Courriel direct</p>
+              <p class="text-sm font-bold text-white group-hover:text-brand-cyan transition-colors">xavier.muris@gmail.com</p>
+            </div>
+          </a>
+
+          <a href="tel:0615358862" class="glass-panel p-5 rounded-2xl border border-slate-800 hover:border-brand-violet/40 transition-all flex items-center gap-4 group">
+            <div class="w-12 h-12 rounded-xl bg-brand-violet/10 border border-brand-violet/20 flex items-center justify-center text-brand-violet group-hover:scale-110 transition-transform">
+              <i data-lucide="phone" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <p class="text-xs text-slate-400">Téléphone mobile</p>
+              <p class="text-sm font-bold text-white group-hover:text-brand-violet transition-colors">06 15 35 88 62</p>
+            </div>
+          </a>
+
+          <div class="glass-panel p-5 rounded-2xl border border-slate-800 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+              <i data-lucide="map-pin" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <p class="text-xs text-slate-400">Localisation & Mobilité</p>
+              <p class="text-sm font-bold text-white">8 rue de la Prévoté, 87240 Ambazac</p>
+              <p class="text-xs text-slate-400 mt-0.5">Mobilité Limoges métropole, Haute-Vienne & Nouvelle-Aquitaine (Permis B)</p>
+            </div>
+          </div>
+
+          <!-- Direct CV Download Action -->
+          <div class="glass-panel p-6 rounded-2xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950">
+            <h4 class="text-sm font-bold text-white mb-2 flex items-center gap-2">
+              <i data-lucide="file-check" class="w-4 h-4 text-brand-400"></i> Dossier de candidature
+            </h4>
+            <p class="text-xs text-slate-400 mb-4 leading-relaxed">
+              Consultez et imprimez la version standardisée du CV au format PDF en un clic.
+            </p>
+            <button onclick="window.print()" class="w-full py-3 px-4 rounded-xl bg-brand-500 hover:bg-brand-400 text-white font-bold text-xs shadow-lg shadow-brand-500/20 transition-all flex items-center justify-center gap-2">
+              <i data-lucide="printer" class="w-4 h-4"></i>
+              <span>Imprimer / Télécharger en PDF</span>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Interactive Contact Form -->
+        <div class="lg:col-span-7">
+          <div class="glass-panel p-8 rounded-3xl border border-slate-800 relative shadow-2xl">
+            
+            <h3 class="text-xl font-bold font-heading text-white mb-2">Envoyez-moi un message direct</h3>
+            <p class="text-xs text-slate-400 mb-6">Je vous réponds sous 24 à 48 heures ouvrées.</p>
+
+            <form id="contact-form" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1.5" for="name">Votre Nom & Prénom *</label>
+                  <input type="text" id="name" required placeholder="ex: Sophie Laurent" 
+                    class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-800 text-slate-100 placeholder-slate-500 text-sm focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan focus:outline-none transition-all">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1.5" for="email">Votre Courriel *</label>
+                  <input type="email" id="email" required placeholder="ex: contact@structure.org" 
+                    class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-800 text-slate-100 placeholder-slate-500 text-sm focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan focus:outline-none transition-all">
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1.5" for="subject">Objet de votre prise de contact</label>
+                <select id="subject" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-800 text-slate-100 text-sm focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan focus:outline-none transition-all">
+                  <option value="recrutement">Opportunité de recrutement (Direction / Coordination)</option>
+                  <option value="partenariat">Proposition de partenariat / Projet territorial</option>
+                  <option value="mission">Mission d'ingénierie / Conseil en politiques jeunesse</option>
+                  <option value="autre">Autre demande</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1.5" for="message">Votre Message *</label>
+                <textarea id="message" rows="4" required placeholder="Présentez brièvement vos besoins ou le projet..."
+                  class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-800 text-slate-100 placeholder-slate-500 text-sm focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan focus:outline-none transition-all"></textarea>
+              </div>
+
+              <div class="pt-2">
+                <button type="submit" id="submit-btn" class="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-brand-cyan via-brand-500 to-brand-violet hover:opacity-95 text-white font-bold text-sm shadow-xl shadow-brand-cyan/20 transition-all flex items-center justify-center gap-2 group">
+                  <span id="btn-text">Transmettre le message</span>
+                  <i data-lucide="send" id="btn-icon" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                </button>
+              </div>
+            </form>
+
+            <!-- Success Message (hidden initially) -->
+            <div id="form-success" class="hidden text-center py-10 space-y-3">
+              <div class="w-16 h-16 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto ring-4 ring-emerald-500/10">
+                <i data-lucide="check" class="w-8 h-8"></i>
+              </div>
+              <h4 class="text-xl font-bold font-heading text-white">Message envoyé avec succès !</h4>
+              <p class="text-xs text-slate-300 max-w-md mx-auto leading-relaxed">
+                Merci pour votre prise de contact. Votre message a bien été pris en compte, je reviendrai vers vous dans les plus brefs délais.
+              </p>
+              <button onclick="resetForm()" class="px-5 py-2.5 rounded-xl bg-slate-800 text-xs text-slate-300 hover:text-white border border-slate-700">
+                Envoyer un autre message
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-10 border-t border-slate-800/80 bg-slate-950 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-violet to-brand-cyan flex items-center justify-center text-white font-bold text-xs">
+          XM
+        </div>
+        <span>&copy; <span id="current-year"></span> Xavier MURIS — Cadre Direction & Management Associatif</span>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="#about" class="hover:text-white transition-colors">À propos</a>
+        <a href="#experiences" class="hover:text-white transition-colors">Expériences</a>
+        <a href="#competences" class="hover:text-white transition-colors">Compétences</a>
+        <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:text-white text-slate-400">
+          <i data-lucide="arrow-up" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- MODAL FOR DETAILED PROJECT STUDY -->
+  <div id="project-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="glass-panel bg-slate-900 max-w-2xl w-full rounded-3xl border border-slate-700 shadow-2xl p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto">
+      <button onclick="closeModal()" class="absolute top-5 right-5 p-2 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div id="modal-content">
+        <!-- Dynamically injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Current Year in Footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Dark / Light Mode Toggle with LocalStorage
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const htmlElement = document.documentElement;
+
+    function applyTheme(isDark) {
+      if (isDark) {
+        htmlElement.classList.add('dark');
+        htmlElement.classList.remove('light');
+        themeIcon.setAttribute('data-lucide', 'sun');
+      } else {
+        htmlElement.classList.remove('dark');
+        htmlElement.classList.add('light');
+        themeIcon.setAttribute('data-lucide', 'moon');
+      }
+      lucide.createIcons();
+    }
+
+    // Default to dark mode or saved preference
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    applyTheme(savedTheme === 'dark');
+
+    themeToggleBtn.addEventListener('click', () => {
+      const isCurrentlyDark = htmlElement.classList.contains('dark');
+      const newTheme = isCurrentlyDark ? 'light' : 'dark';
+      localStorage.setItem('theme', newTheme);
+      applyTheme(!isCurrentlyDark);
+    });
+
+    // Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Typing Effect in Hero
+    const words = [
+      "Cadre Direction & Management Associatif",
+      "Pilote de Politiques Jeunesse Territoriales",
+      "Expert Ingénierie Financière (CAF, SDJES, FDVA)",
+      "Animateur d'Écosystèmes (40+ Partenaires)",
+      "Innovateur Social & Numérique (IA & Outils Digitaux)"
+    ];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typingElement = document.getElementById('typing-text');
+
+    function typeEffect() {
+      const currentWord = words[wordIndex];
+      if (isDeleting) {
+        typingElement.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typingElement.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      let speed = isDeleting ? 30 : 65;
+
+      if (!isDeleting && charIndex === currentWord.length) {
+        speed = 2200; // Pause at end
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        speed = 400;
+      }
+
+      setTimeout(typeEffect, speed);
+    }
+    typeEffect();
+
+    // Accordion Logic for Timeline Items
+    const triggers = document.querySelectorAll('.accordion-trigger');
+    triggers.forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const content = trigger.nextElementSibling;
+        const chevron = trigger.querySelector('.accordion-chevron');
+        const isHidden = content.classList.contains('hidden');
+
+        if (isHidden) {
+          content.classList.remove('hidden');
+          chevron.style.transform = 'rotate(180deg)';
+        } else {
+          content.classList.add('hidden');
+          chevron.style.transform = 'rotate(0deg)';
+        }
+      });
+    });
+
+    // Timeline Filter Buttons
+    const filterBtns = document.querySelectorAll('.exp-filter-btn');
+    const timelineItems = document.querySelectorAll('.timeline-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Active button styles
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-brand-500', 'text-white', 'shadow-md', 'shadow-brand-500/20');
+          b.classList.add('bg-slate-900', 'text-slate-400', 'border', 'border-slate-800');
+        });
+        btn.classList.add('bg-brand-500', 'text-white', 'shadow-md', 'shadow-brand-500/20');
+        btn.classList.remove('bg-slate-900', 'text-slate-400', 'border', 'border-slate-800');
+
+        const filter = btn.getAttribute('data-filter');
+        timelineItems.forEach(item => {
+          if (filter === 'all' || item.getAttribute('data-category') === filter) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Project Filter Buttons
+    const pfilterBtns = document.querySelectorAll('.proj-filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    pfilterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        pfilterBtns.forEach(b => {
+          b.classList.remove('bg-brand-cyan', 'text-slate-900', 'font-bold');
+          b.classList.add('bg-slate-900', 'text-slate-400', 'border', 'border-slate-800');
+        });
+        btn.classList.add('bg-brand-cyan', 'text-slate-900', 'font-bold');
+        btn.classList.remove('bg-slate-900', 'text-slate-400', 'border', 'border-slate-800');
+
+        const filter = btn.getAttribute('data-pfilter');
+        projectCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Project Details Data & Modal Logic
+    const projectData = {
+      'ps-jeunes': {
+        title: "Dispositif Prestation de Service Jeunes (PS Jeunes) — CAF87",
+        tag: "Pilotage Stratégique & Évaluation Territoriale",
+        description: "La PS Jeunes est le dispositif pivot de la politique enfance-jeunesse territoriale. Sous la direction de Xavier MURIS, ce programme a été articulé autour des 4 objectifs nationaux prioritaires de la CNAF.",
+        points: [
+          "<strong>Fédération de plus de 40 partenaires</strong> : Élus communautaires, collèges, services sociaux, CAF, DDETS, et associations sportives et culturelles.",
+          "<strong>Aller-Vers et Inclusion</strong> : Structuration d'actions hors-les-murs pour toucher les publics les plus isolés géographiquement ou socialement.",
+          "<strong>Bilan Quadriennal Complet</strong> : Modélisation des données quantitatives et qualitatives pour défendre le renouvellement du conventionnement auprès des commissions CAF."
+        ],
+        tools: ["Convention CAF", "Tableaux de bord d'activité", "Enquêtes de satisfaction", "Ingénierie financière"]
+      },
+      'evasion-innov': {
+        title: "Programmes CAF Évasion & Innov Jeune",
+        tag: "Autonomie & Pouvoir d'Agir",
+        description: "Dispositifs d'émancipation conçus pour transformer les adolescents en véritables chefs de projet de leurs loisirs et vacances.",
+        points: [
+          "<strong>Co-construction intégrale</strong> : Les jeunes définissent la destination, évaluent le budget prévisionnel et planifient l'intendance.",
+          "<strong>Autofinancement & Chantiers</strong> : Organisation d'opérations d'autofinancement (ventes, chantiers citoyens valorisés par la commune).",
+          "<strong>Soutien institutionnel</strong> : Dépôt et validation systématique des dossiers de subventions auprès des jurys d'attribution CAF."
+        ],
+        tools: ["Gestion de projet participative", "Budget prévisionnel", "Dossiers de subvention CAF"]
+      },
+      'aller-vers': {
+        title: "Stratégie d'Aller-Vers & Refonte ALSH LoKdo (+39%)",
+        tag: "Développement & Attractivité",
+        description: "Plan d'action volontariste déployé pour redynamiser l'accueil de loisirs adolescents et lever les freins à la participation.",
+        points: [
+          "<strong>Présence de terrain</strong> : Permanences régulières aux abords du collège, des city-stades et des espaces informels.",
+          "<strong>Décloisonnement des activités</strong> : Sorties événementielles, projets vidéo/médias et chantiers adaptés aux attentes réelles des ados.",
+          "<strong>Résultat mesuré</strong> : Bond spectaculaire de <strong>+39% de la fréquentation en un an</strong> et fidélisation d'une nouvelle mixité garçons/filles."
+        ],
+        tools: ["Diagnostic d'usage", "Médiation de rue", "Communication directe ados", "Indicateurs de fréquentation"]
+      },
+      'digital-ia': {
+        title: "Promeneur du Net & Transition Numérique CASA",
+        tag: "Innovation & Outils Digitaux",
+        description: "Modernisation des pratiques professionnelles associatives par la présence sur les réseaux et l'automatisation par l'IA.",
+        points: [
+          "<strong>Promeneur du Net</strong> : Présence éducative et préventive sur Instagram, Snapchat et Discord pour accompagner les jeunes dans leur vie numérique.",
+          "<strong>Tableaux de bord dynamiques</strong> : Déploiement d'outils collaboratifs pour automatiser le suivi des indicateurs d'activité du secteur jeunesse.",
+          "<strong>Intégration de l'IA Générative</strong> : Optimisation de la rédaction des bilans et des supports de communication pour un gain de productivité direct."
+        ],
+        tools: ["Instagram/Discord", "Outils IA générative", "Canva Pro", "Tableaux de bord Google Sheets / Excel"]
+      }
+    };
+
+    const modal = document.getElementById('project-modal');
+    const modalContent = document.getElementById('modal-content');
+
+    function openModal(projectId) {
+      const data = projectData[projectId];
+      if (!data) return;
+
+      modalContent.innerHTML = `
+        <span class="text-xs font-mono px-3 py-1 rounded-full bg-brand-cyan/15 text-brand-cyan border border-brand-cyan/30 inline-block mb-3">
+          ${data.tag}
+        </span>
+        <h3 class="text-2xl font-bold font-heading text-white mb-3">${data.title}</h3>
+        <p class="text-sm text-slate-300 leading-relaxed mb-6">${data.description}</p>
+        
+        <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-3">Points Clés & Résultats :</h4>
+        <ul class="space-y-2.5 text-xs sm:text-sm text-slate-300 mb-6">
+          ${data.points.map(pt => `<li class="flex items-start gap-2.5"><i data-lucide="check-circle" class="w-4 h-4 text-brand-cyan shrink-0 mt-0.5"></i><span>${pt}</span></li>`).join('')}
+        </ul>
+
+        <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-2">Méthodes & Outils mobilisés :</h4>
+        <div class="flex flex-wrap gap-2">
+          ${data.tools.map(t => `<span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700">${t}</span>`).join('')}
+        </div>
+      `;
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      lucide.createIcons();
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    // Interactive Contact Form Handling with confetti
+    const contactForm = document.getElementById('contact-form');
+    const formSuccess = document.getElementById('form-success');
+    const submitBtn = document.getElementById('submit-btn');
+    const btnText = document.getElementById('btn-text');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // Loading State
+      btnText.textContent = "Transmission en cours...";
+      submitBtn.disabled = true;
+
+      setTimeout(() => {
+        contactForm.classList.add('hidden');
+        formSuccess.classList.remove('hidden');
+        lucide.createIcons();
+
+        // Celebration Confetti
+        try {
+          confetti({
+            particleCount: 80,
+            spread: 70,
+            origin: { y: 0.6 }
+          });
+        } catch(err) {
+          console.log(err);
+        }
+
+        btnText.textContent = "Transmettre le message";
+        submitBtn.disabled = false;
+      }, 800);
+    });
+
+    function resetForm() {
+      contactForm.reset();
+      contactForm.classList.remove('hidden');
+      formSuccess.classList.add('hidden');
+    }
+  </script>
+</body>
+</html>
